@@ -1,0 +1,11 @@
+###Option 1 - Launch via browser (recommended)
+
+1. Follow the link: https://huggingface.co/spaces/mlproef/bspproject1-demo
+
+2. Enter:
+- Headline - news headline
+- Text - text or brief description of the news
+- Click Submit.
+
+3. The system will analyze the text and generate a JSON structure with emotional reactions for different social groups.
+(In this mode, you don't need your own API key — the model runs on my key, which is hidden.)
