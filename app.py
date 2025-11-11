@@ -1,14 +1,15 @@
 import os
 import openai
+import gradio as gr
 
-# Загружаем .env локально (на GitHub Actions он не нужен)
+
 try:
     from dotenv import load_dotenv
     load_dotenv()
 except:
     pass
 
-# Берём ключ из переменной окружения
+
 api_key = os.getenv("OPENAI_API_KEY")
 if not api_key:
     raise RuntimeError("OPENAI_API_KEY не найден. Укажите его в .env или в GitHub Secrets.")
@@ -199,6 +200,19 @@ def analyze(headline, body):
         max_tokens=800
     )
     return resp.choices[0].message.content
+    
+
+iface = gr.Interface(
+    fn=analyze,
+    inputs=[
+        gr.Textbox(label="Headline"),
+        gr.Textbox(label="Text", lines=6, placeholder="Paste the news text here")
+    ],
+    outputs=gr.Textbox(label="JSON Output", lines=12),
+    title="News Emotion Analyzer",
+    description="Analyzes emotional reactions across social groups in Luxembourg based on a news article."
+)
 
 if __name__ == "__main__":
-    print(analyze("Test headline", "Test body"))
+    # Локально и в Hugging Face
+    iface.launch(server_name="0.0.0.0", server_port=7860)
