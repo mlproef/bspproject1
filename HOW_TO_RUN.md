@@ -11,7 +11,7 @@
 (In this mode, you don't need your own API key - the model runs on my key, which is hidden.)
 
 
-###Option 2 - Run locally on your computer:
+### Option 2 - Run locally on your computer:
 
 *Requirements:*
 - Python 3.9+
@@ -19,20 +19,20 @@
 
 1. Clone the repository:
 
-git clone https://github.com/mlproef/bspproject1
-cd bspproject1
+>git clone https://github.com/mlproef/bspproject1
+>cd bspproject1
 
 2. Set up dependencies:
 
-pip install -r requirements.txt
+>pip install -r requirements.txt
 
 3. Create an .env file:
 
-OPENAI_API_KEY=your-openai-key
+>OPENAI_API_KEY=your-openai-key
 
 4. Start the program:
 
-python app.py
+>python app.py
 
 After launching, the Gradio interface will open at the following address: http://localhost:7860
 
