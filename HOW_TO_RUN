@@ -1,4 +1,4 @@
-###Option 1 - Launch via browser (recommended)
+###Option 1 - Launch via browser (recommended):
 
 1. Follow the link: https://huggingface.co/spaces/mlproef/bspproject1-demo
 
@@ -8,4 +8,15 @@
 - Click Submit.
 
 3. The system will analyze the text and generate a JSON structure with emotional reactions for different social groups.
-(In this mode, you don't need your own API key — the model runs on my key, which is hidden.)
+(In this mode, you don't need your own API key - the model runs on my key, which is hidden.)
+
+
+###Option 2 - Run locally on your computer:
+
+*Requirements:*
+- Python 3.9+
+- OpenAI account + your API key
+
+1. Clone the repository:
+git clone https://github.com/mlproef/bspproject1
+cd bspproject1
