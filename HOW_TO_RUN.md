@@ -1,4 +1,4 @@
-###Option 1 - Launch via browser (recommended):
+### Option 1 - Launch via browser (recommended):
 
 1. Follow the link: https://huggingface.co/spaces/mlproef/bspproject1-demo
 
